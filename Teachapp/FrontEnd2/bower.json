@@ -1,0 +1,18 @@
+{
+  "name": "frontend2",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1",
+    "backbone": "~1.1.0",
+    "modernizr": "~2.7.1",
+    "components-bootstrap": "~3.2.0",
+    "chartjs": "~0.2.0",
+    "nicescroll": "*",
+    "jquery.dcaccordion": "dillonforrest/jquery.dcaccordion",
+    "jquery.cookie": "~1.4.1",
+    "fontawesome": "~4.2.0",
+    "malihu-custom-scrollbar-plugin": "~3.0.4"
+  },
+  "devDependencies": {}
+}

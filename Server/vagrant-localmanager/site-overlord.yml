@@ -1,0 +1,46 @@
+---
+- hosts: local_managermachine
+  vars:
+    codesrc_directory: /src
+    git_branch_to_use: master
+  tasks:
+#setup git enviroment
+  - name: ensure git is at the latest version
+    apt: pkg=git state=latest
+  - name: create git user to setup enviorment
+    user: name=git state=present createhome=yes home=/var/git shell=/bin/bash comment=Git 
+#    sudo: yes
+
+  - name: create git ssh folder
+    file: name=/var/git/.ssh state=directory recurse=yes owner=git group=git mode=700
+    sudo_user: git
+  - name: copy authorized keys for git ops with standard defaults if file DNE
+    copy: src=files/shaylaapp_keys dest=/var/git/.ssh/authorized_keys force=no owner=git group=git mode=700
+    sudo_user: git
+
+  - name: create ~ ssh folder
+    file: name=~/.ssh state=directory recurse=yes owner=root group=root mode=700
+    sudo_user: root
+    ignore_errors: yes #sometimes this gets run as a user that can't create folders for root user
+#  - name: copy authorized keys for the current user, with standard defaults if file DNE
+#    copy: src=files/gitserver_main.authorized_keys dest=~/.ssh/authorized_keys force=no owner=root group=root mode=700
+#    sudo_user: root
+
+
+#make sure that our source repositories can be controled from the git user
+  - file: state=directory path={{ codesrc_directory }} owner=git group=git recurse=yes
+#    ignore_errors: yes # this can fail if .git subfolder has root permissions
+  - name: ensure ssh will not ask to verify keys
+    lineinfile: dest=/etc/ssh/ssh_config line="StrictHostKeyChecking no"
+  - name: ensure our git user has valid keys
+    copy: src=files/sshKeys/ dest=/var/git/.ssh owner=git group=git mode=600
+  - name: ensure our root user has valid keys
+    copy: src=files/sshKeys/ dest=/root/.ssh owner=root group=root mode=600 
+    sudo_user: root
+    ignore_errors: yes #sometimes this gets run as a user that can't create folders for root user
+
+  - name: create/ensure folder for repo
+    git: repo=ssh://git@/~/{{ item }}.git dest=/src/{{ item }} accept_hostkey=yes
+    sudo_user: git
+    with_items: git_repos
+    ignore_errors: yes #sometimes a repo will not have been initalized yet

@@ -1,0 +1,15 @@
+<a href="javascript:;" >
+	<i class="fa fa-book"></i> 
+	<span>Exams</span>
+	<span class="label label-theme pull-right mail-info"> <%=exams.length%> </span>
+</a>
+<ul class="sub js-testlist">
+	<li><a><button type="button" class="btn btn-xs btn-theme small">Create New Exam +</button></a></li>
+
+	<% for(var i=0; i<exams.length; i++) { %>
+		<% if(exams[i].name) %>
+		<li><a  href="#exam/<%= exams[i].id %>"  data-examid="<%= exams[i].id %>" class="js-edit_exam"><%if (exams[i].name) { %> <%= exams[i].name %> <% } else { %> Untitled Exam <% } %></a></li>
+	<% } %>
+
+</ul>
+<!-- href="#!exam/{{id}}"   -->

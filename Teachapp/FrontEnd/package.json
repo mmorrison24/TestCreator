@@ -1,0 +1,10 @@
+{
+	"name": "teachapp-frontend",
+	"main": "index.html",
+	"window":{
+		"width": 1200,
+		"height": 600
+	},
+	"dependencies": {
+	}
+}

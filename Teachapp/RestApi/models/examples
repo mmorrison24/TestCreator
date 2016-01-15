@@ -1,0 +1,60 @@
+//invite.js
+
+// app/models/user.js
+// load the things we need
+//var Sequelize = require('sequelize');
+
+module.exports = function(sequelize, DataTypes) {
+
+	//define model ==================
+	return sequelize.define('Invite', {
+	  username: DataTypes.STRING(65),
+	  level: DataTypes.ENUM('free user','invited','neophite','paid user','admin'),
+	  campaign: DataTypes.STRING(65),
+	  email: DataTypes.STRING(65),
+	  forumname: DataTypes.STRING(65),
+	  joindate: DataTypes.DATE,
+	  trialExpiryDate: DataTypes.DATE,
+	  creatorip: DataTypes.STRING(15),
+	  creator : DataTypes.STRING(65)
+	},{
+		updatedAt: 'dateupdated',
+		createdAt: 'datecreated'
+	});
+}
+
+
+//User Model
+
+// app/models/user.js
+// load the things we need
+//var Sequelize = require('sequelize');
+
+module.exports = function(sequelize, DataTypes) {
+
+	//define model ==================
+	return sequelize.define('user', {
+	  username: DataTypes.STRING(65),
+	  password: DataTypes.STRING(65),
+	  level: DataTypes.ENUM('free user','invited','neophite','paid user','admin'),
+	  email: DataTypes.STRING(65),
+	  lastlogindate: DataTypes.DATE,
+	  lastloginip: DataTypes.STRING(32),
+	  status: DataTypes.ENUM('active','pending','disabled','suspended'),
+	  title: DataTypes.STRING(18),
+	  firstname: DataTypes.STRING(150),
+	  lastname: DataTypes.STRING(150),
+	  datecreated: DataTypes.DATE,
+	  createdip: DataTypes.STRING(15),
+	  lastPayment : DataTypes.DATE,
+	  paidExpiryDate: DataTypes.DATE,
+	  paymentTracker: DataTypes.STRING(32),
+	  passwordResetHash: DataTypes.STRING(32),
+	  identifier: DataTypes.STRING(32),
+	  apikey: DataTypes.STRING(32)
+	},{
+		//timestamps: true // we need to be able to save timestamp type
+		createdAt: 'datecreated',
+		updatedAt: false
+	});
+}

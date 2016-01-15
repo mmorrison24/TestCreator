@@ -1,0 +1,107 @@
+<!--COMPLETED ACTIONS DONUTS CHART-->
+<div class="row js-canceledit " style="cursor:pointer;">
+    <div class="col-xs-2"><i class="fa fa-remove">&nbsp;</i></div>
+    <div class="col-xs-10 text-right">CLOSE</div>
+</div>
+<div class="donut-main question-edit-container">
+	<h4>Create / Edit Question</h4>
+
+
+
+
+<div class="desc">
+  <div class="row" >
+    <div class="col-md-4" style="padding-top:10px;">Step 1: Name Question</div>
+    <div class="col-md-8">
+      <input type="text" class="form-control js-name" placeholder="Name" value="<%= name %>">
+    </div>
+  </div>
+</div>
+
+  <h4 class="centered mt">TAXONOMY</h4>
+
+<div class="desc">
+  <div class="row" >
+    <div class="col-md-4" style="padding-top:10px;">Step 1: Select Taxonomy</div>
+    <div class="col-md-8">
+      <select class="form-control js-taxonomy">
+        <option value="knowledge"> Knowledge</option>
+        <option value="comprehension"> Comprehension</option>
+        <option value="application"> Application</option>
+        <option value="analysis"> Analysis</option>
+        <option value="synthesis">  Synthesis</option>
+        <option value="evaluation"> Evaluation</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+<!-- Second Activity -->
+<div class="desc">
+
+  <div class="row" style="margin-top:0px;">
+<div class="col-md-4">
+	Step 2: Input Prompt for Question
+</div>
+    <div class="col-md-8">
+      <div class="form-group">
+        <input type="text" class="form-control js-prompt" placeholder="Question Prompt" value="<%= prompt %>">
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+
+<!-- Third Activity -->
+<div class="desc">
+	<div class="row">	
+	<p>Step 3: Create answer options</p>
+	</div>
+	<div class="row">
+
+        <div class=" col-md-1 " style="padding-top:10px;">1</div>
+        <div class=" col-md-11 ">
+				<input type="text" class="form-control js-answer" placeholder="Answer Option" >
+		</div>
+
+    </div>
+
+	<div class="row">
+
+        <div class=" col-md-1 " style="padding-top:10px;">2</div>
+        <div class=" col-md-11">
+				<input type="text" class="form-control" placeholder="Answer Option #2" >
+		</div>
+    </div>
+
+	<div class="row" style="padding-top:20px;">
+
+        <div class=" col-md-4 " style="padding-top:10px;">Select Correct Option</div>
+        <div class=" col-md-8 " >
+				<select class="form-control js-correct">
+					<option>1</option>
+					<option>2</option>
+				</select>
+		</div>
+
+    </div>
+
+</div>
+<!-- Fourth Activity -->
+<div class="desc">
+	<div class="thumb">
+		<span class="badge bg-theme"></span>
+	</div>
+	<div class="details">
+		<p><muted>7 Hours Ago</muted><br/>
+			<a href="#">Question type</a> lorem ipsum<br/>
+		</p>
+	</div>
+</div>
+
+<!-- USERS ONLINE SECTION -->
+<h4 class="centered mt">SAVE QUESTION</h4>
+<button type="button" class="js-save btn btn-md btn-theme medium">Save Question </button>
+<button type="button" class="js-canceledit btn btn-md btn-theme03 medium">Cancel </button>

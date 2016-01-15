@@ -1,0 +1,14 @@
+adduser node
+adduser node sudo
+
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs --yes
+
+
+-- git
+sudo apt-get install git-core
+git config --global user.name "NewUser"
+git config --global user.email newuser@example.com
+git clone https://github.com/prideofconcept/TeachTestApp.git

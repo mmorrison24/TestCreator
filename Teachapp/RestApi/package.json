@@ -1,0 +1,11 @@
+{
+	"name": "teachapp-api",
+	"main": "server.js",
+	"dependencies": {
+		"express"		: "~4.0",
+		"body-parser"	: "~1.0.1",
+	    "sequelize"  	: "*",
+	    "mysql"			: "*",
+	    "cors"			: "*"	
+	}
+}

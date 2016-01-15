@@ -1,0 +1,5 @@
+//How to user forever to start server
+
+forever start server.js
+forever logs
+tail -f /root/.forever/KpWm.log

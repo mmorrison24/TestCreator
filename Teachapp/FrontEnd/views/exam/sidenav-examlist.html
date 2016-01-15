@@ -1,0 +1,12 @@
+	<a href="javascript:;" >
+		<i class="fa fa-book"></i> 
+		<span>Exams</span>
+		<span class="label label-theme pull-right mail-info">{{exams.length}}</span>
+	</a>
+	<ul class="sub js-testlist">
+		<li><a><button type="button" class="btn btn-xs btn-theme small">Create New Exam +</button></a></li>
+		{{#exams}}
+		<li><a  href="{{ make_link type='exam' typeid=id }}"  data-examid="{{id}}" class="js-edit_exam">{{name}}</a></li>
+		{{/exams}}
+	</ul>
+<!-- href="#!exam/{{id}}"   -->

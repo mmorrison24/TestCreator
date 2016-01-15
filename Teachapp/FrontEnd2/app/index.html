@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test Teach App Prototype</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link href="styles/bootstrap.css" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="styles/style-responsive.css" rel="stylesheet">        
+        <!--external css-->
+        <!-- <link rel="stylesheet" type="text/css" href="styles/zabuto_calendar.css"> -->
+        <link rel="stylesheet" type="text/css" href="bower_components/jquery.gritter/css/jquery.gritter.css" />
+        <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css"/>
+        <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"/>
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+
+
+
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div id="container" >
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg js-mainheader">
+
+        </header>
+        <!--header end-->
+
+         <!--sidebar start-->
+        <aside>
+            <div id="sidebar"  class="nav-collapse ">
+
+                <!-- **********************************************************************************************************************************************************
+                MAIN SIDEBAR MENU
+                *********************************************************************************************************************************************************** -->
+                <!--sidebar start-->
+
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu js-sidebar-menu" id="nav-accordion">
+
+                    <p class="centered"><a href="profile.html"><img src="" class="img-circle" style="background-color:gray;" width="80"></a></p>
+                    <h5 class="centered">Teach App</h5>
+
+                    <li class="mt">
+                        <a class="" href="#!">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu js-testlist">
+                        
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!--sidebar end-->
+
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper js-container">
+
+
+
+            </section>
+        </section>
+
+
+
+        <!-- **********************************************************************************************************************************************************
+        RIGHT SIDEBAR CONTENT
+        *********************************************************************************************************************************************************** -->                  
+
+        <aside id="rightPanel" class="col-lg-5 ds">
+
+        </aside><!-- /right Panel -->
+
+
+        <!--main content end-->
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                2014 - Teach Test Application
+                <a href="index.html#" class="go-top"><i class="fa fa-angle-up"></i></a>
+            </div>
+        </footer>
+        <!--footer end-->
+    </div>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="bower_components/jquery.dcaccordion/jquery.dcaccordion.2.7.js"></script>
+        <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+        <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/common.js"></script>
+
+        <script src="scripts/templates.js"></script>
+        <script src="scripts/models/test.js"></script>
+        <script src="scripts/models/exam.js"></script>
+        <script src="scripts/views/sidebar.js"></script>
+        <script src="scripts/collections/exams.js"></script>
+        <script src="scripts/views/question_edit-view.js"></script>
+        <script src="scripts/views/exam_detail.js"></script>
+        <script src="scripts/models/question.js"></script>
+        <script src="scripts/collections/questions.js"></script>
+        <script src="scripts/views/question_view.js"></script>
+        <script src="scripts/views/questionlist_view.js"></script>
+        <script src="scripts/controller/global.js"></script>        
+        <script src="scripts/routes/router.js"></script>
+
+        <!-- endbuild -->
+
+</body>
+</html>

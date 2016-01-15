@@ -1,0 +1,1 @@
+#rightPanel{position:fixed;top:50px;right:-400px}.transition('all 1s ease') #rightPanel.open{right:0}

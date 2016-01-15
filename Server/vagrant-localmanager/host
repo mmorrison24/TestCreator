@@ -1,0 +1,2 @@
+[local_managermachine]
+localhost              ansible_connection=local

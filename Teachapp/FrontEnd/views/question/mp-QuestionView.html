@@ -1,0 +1,46 @@
+<div id="panel_questionview" class="col-lg-12 mt">
+			 
+				<div class="row content-panel">
+					<div class="col-lg-10 col-lg-offset-1">
+						<div class="invoice-body">
+							<div class="pull-left"> 
+								<h1>Question Bank</h1>
+								<address>
+								<strong>Username</strong><br>
+								</address>
+							</div><!-- /pull-left -->
+							
+							<div class="pull-right">
+								<h2>All</h2>
+							</div><!-- --/pull-right ---->
+							
+							<div class="clearfix"></div>
+			
+						</div><!-- /invoice-body -->
+					</div><!-- --/col-lg-10 ---->
+					<table class="table">
+						<thead>
+						<tr>
+						<th style="width:60px" class="text-center">QTY</th>
+						<th class="text-left">Question Prompt</th>
+						<th style="width:140px" class="text-right">TYPE</th>
+						<th style="width:90px" class="text-right">MISC</th>
+						</tr>
+						</thead>
+							<tbody>
+								{{#questions}}
+								<tr class="pointer js-editable_question" data-id="{{id}}">
+									<td class="text-center">#</td>
+									<td>{{name}}</td>
+									<td class="text-right">{{type}}</td>
+									<td class="text-right">{{createdAt}}</td>
+								</tr>
+								{{/questions}}
+							</tbody>
+					</table>
+					<br>
+					<br>
+		</div><!--/col-lg-12 mt -->
+				
+			
+	</div></div></div>

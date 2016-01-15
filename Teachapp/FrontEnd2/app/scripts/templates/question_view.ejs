@@ -1,0 +1,14 @@
+
+    <td class="inbox-small-cells">
+        <input type="checkbox" class="mail-checkbox">
+    </td>
+    <td class="inbox-small-cells"><%= index %></td>
+    <%  var _id = (typeof id != 'undefined')? id : '#' %>
+    <td class="view-message  dont-show"><a href="#question_edit/<%= _id %>"><%= taxonomy %></a></td>
+    <td class="view-message "><a href="#exam/<%= currentexam_id %>/question/<%= _id %>"><%= name %></a></td>
+    <td class="view-message  inbox-small-cells"><a href="#exam/<%= currentexam_id %>/question/<%= _id %>"><i class="fa fa-pencil"></i> Edit</a></td>
+    <%  timeUpdated = (typeof updatedAt != 'undefined')?updatedAt : 0 %>
+    <%  var x = new Date( timeUpdated ).toDateString(); %>
+    <td class="view-message  text-right"> <%= x %></td>
+
+
